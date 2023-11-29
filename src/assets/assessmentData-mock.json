@@ -1,0 +1,29 @@
+{  
+ 
+    "users": [
+      { "SLNO": 1, "Name": "John Doe", "ADUsername": "john", "Role":"PM","Email":"Sundar@gmail.com","Department":"HR","SubDepartment":"Analytics","Location":"puducherry","Action":""}
+   
+    ],
+
+    "users1": [
+      { "SLNO": 1, "SubDeptName": "HR", "SubDeptManagerName":"sundar","SubDeptManagerEmailID":"Sundar@gmail.com",
+      "UpdatedBY":"sundar","UpdatedTime":"12:30 AM","Action":""},
+      { "SLNO": 2, "SubDeptName": "HR", "SubDeptManagerName":"sundar","SubDeptManagerEmailID":"Sundar@gmail.com",
+      "UpdatedBY":"sundar","UpdatedTime":"12:30 AM","Action":""}
+   
+    ],
+    
+    "users2": [
+    { "SLNO": 1, "DeptName": "HR", "ManagerName": "john", "ManagerEmailID":"jhon@gmail.com","Location":"puducherry",
+    "SubDeptName":"Analytics","SubDeptManagerName":"Sub-HR","SubDeptManagerEmailID":"Sundar@gmail.com",
+    "CreatedBy":"jhon","createdTime":"12:23 PM","UpdatedBY":"jhon","UpdatedTime":"1:23 PM","Action":""
+  },
+  {"SLNO": 2, "DeptName": "IT", "ManagerName": "Kenn", "ManagerEmailID":"Kenn@gmail.com","Location":"puducherry",
+  "SubDeptName":"EngineeR","SubDeptManagerName":"HR","SubDeptManagerEmailID":"Kenn@gmail.com",
+  "CreatedBy":"Kenn","createdTime":"12:23 PM","UpdatedBY":"Kenn","UpdatedTime":"1:23 PM","Action":""}
+ 
+  ]
+
+  
+}
+  

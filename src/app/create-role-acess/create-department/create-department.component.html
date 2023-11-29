@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <form [formGroup]="CreateDepartment">
+        <div class="container-fluid">
+            <div class="row col-lg-12 title">
+           <p>Administrator > Create Department</p>
+          </div><br><br><br>
+            <div class="container">
+                <div class="row col-lg-12 title1 ">
+
+                    <p>Department Profile</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 " style="margin-top: 20px;">
+                        <input class="input_text1" placeholder="Department Name" formControlName="DepartmentName"
+                            style="width: 50%;">
+                        <p *ngIf="CreateDepartment.controls['DepartmentName'].invalid && CreateDepartment.controls['DepartmentName'].touched"
+                            style="color: red; margin-left: 400px; ">
+                            Department Name is required
+                        </p>
+                    </div>
+                    <div class="col-md-6" style="margin-top: 10px;">
+                        <input class="userInput" placeholder="Manager Name" formControlName="ManagerName"
+                            style="width: 50%;">
+                        <p *ngIf="CreateDepartment.controls['ManagerName'].invalid && CreateDepartment.controls['ManagerName'].touched"
+                            style="color: red;  margin-left: 250px;">Manager Name is required
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 10px;">
+                        <input class="input_text1" placeholder="Manager EmailID" formControlName="ManagerEmailID"
+                            style="width: 50%;">
+                        <p *ngIf="CreateDepartment.controls['ManagerEmailID'].invalid && CreateDepartment.controls['ManagerEmailID'].touched"
+                            style="color: red; margin-left: 400px;">Manager EmailID is required
+                        </p>
+                    </div>
+                    <div class="col-md-6" style="margin-top: 3px;">
+                        <input class="userInput" placeholder="Location" formControlName="Location" style="width: 50%;">
+                        <p *ngIf="CreateDepartment.controls['Location'].invalid && CreateDepartment.controls['Location'].touched"
+                            style="color: red; margin-left: 250px;">Location is required
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12 label1" style="margin-top: 20px;">
+                        <label placeholder="Sub-DepartmentName">Sub-Department</label>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6 rad" style="margin-top: -50px; margin-left: 780px;">
+
+                        <input type="radio" name="rad">Yes
+                    </div>
+                    <div class="col-md-6 rad" style="margin-top: -50px;  margin-left: 900px;">
+                        <input type="radio" name="rad">No
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: 40px;">
+                <div class="row col-lg-12 title1">
+
+                    <p>Sub-Department Profile</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 10px;">
+                        <input class="input_text1" placeholder="Sub-Department Name"
+                            formControlName="SubDepartmentName"  style="width: 50%;">
+                        <p
+                            *ngIf="CreateDepartment.controls['SubDepartmentName'].invalid && CreateDepartment.controls['SubDepartmentName'].touched"
+                            style="color: red;  margin-left: 400px;" >Sub-Department Name is required
+                    </p></div>
+                    <div class="col-md-6" style="margin-top: 3px;">
+                        <input class="userInput" placeholder="Sub-Dept Manager Name"
+                            formControlName="SubDeptManagerName" style="width: 50%;">
+                        <p
+                            *ngIf="CreateDepartment.controls['SubDeptManagerName'].invalid && CreateDepartment.controls['SubDeptManagerName'].touched"
+                            style="color: red; margin-left: 250px;">Sub-Dept Manager Name is required
+                    </p>
+                  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input class="input_text1" placeholder="Sub-Dept Manager EmailID"
+                            formControlName="SubDeptManagerEmailID" style="width: 50%;">
+                        <p
+                            *ngIf="CreateDepartment.controls['SubDeptManagerEmailID'].invalid && CreateDepartment.controls['SubDeptManagerEmailID'].touched"
+                            style="color: red;  margin-left: 400px;">Sub-Dept Manager EmailID is required
+                    </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" button2 col-lg-12 ">
+                        <button class="submit-button" type="submit" (click)="Submit1()">Add</button>
+                        <button class="submit-button" type="submit" (click)="Reset()">Reset</button>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row col-lg-12 title1">
+
+                    <p>Sub-Department Details</p>
+                </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>SL.NO</th>
+                        <th>Sub.Dept.Name</th>
+                        <th>Sub.Dept.ManagerName</th>
+                        <th>Sub.Dept.ManagerEmailID</th>
+                        <th>UpdatedBY</th>
+                        <th>UpdatedTime</th>
+                        <th>Action</th>
+                     </tr>
+                </thead>
+                <tbody>
+                    <tr class="rowAlign" scope="row" *ngFor="let user of users1">
+                        <td>{{user.SLNO}}</td>
+                        <td>{{user.SubDeptName}}</td>
+                        <td>{{user.SubDeptManagerName}}</td>
+                        <td>{{user.SubDeptManagerEmailID}}</td>
+                        <td>{{user.UpdatedBY}}</td>
+                        <td>{{user.UpdatedTime}}</td>
+                       <td>Edit<i class="fas fa-edit"></i> Delete<i class="fa fa-trash" aria-hidden="true"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class=" button2 col-lg-12 ">
+                    <button class="submit-button" type="submit" (click)="Submit1()">Submit</button>
+                    <button class="submit-button" type="submit" (click)="Reset()">Reset</button>
+
+                </div>
+            </div>
+        </div>
+            <div class="container">
+                <div class="row col-lg-12 title1">
+
+                    <p>Department Profile</p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SL.NO</th>
+                            <th>Dept.Name</th>
+                            <th>Manager Name</th>
+                            <th>Manager EmailID</th>
+                            <th>Location</th>
+                            <th>Sub-Dept.Name</th>
+                            <th>Sub-Dept.ManagerName</th>
+                            <th>Sub-Dept.ManagerEmailID</th>
+                            <th>CreatedBY</th>
+                            <th>CreatedtedTime</th>
+                            <th>UpdatedBY</th>
+                            <th>UpdatedTime</th>
+                            <th>Action</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rowAlign" scope="row" *ngFor="let user of users2">
+                            <td>{{user.SLNO}}</td>
+                            <td>{{user.DeptName}}</td>
+                            <td>{{user.ManagerName}}</td>
+                            <td>{{user.ManagerEmailID}}</td>
+                            <td>{{user.Location}}</td>
+                            <td>{{user.SubDeptName}}</td>
+                            <td>{{user.SubDeptManagerName}}</td>
+                            <td>{{user.SubDeptManagerEmailID}}</td>
+                            <td>{{user.UpdatedBY}}</td>
+                            <td>{{user.UpdatedTime}}</td>
+                            <td>{{user.UpdatedBY}}</td>
+                            <td>{{user.UpdatedTime}}</td>
+                           <td>Edit<i class="fas fa-edit"></i> Delete<i class="fa fa-trash" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        
+    </form>
+</body>

@@ -1,0 +1,147 @@
+.title {
+  margin-top: -6px;
+  padding: 10px;
+  font-size: 22px;
+  font-family: sans-serif;
+  background-color: #D5A021;
+}
+
+.para {
+
+  font-size: 20px;
+  color: black;
+  margin-left: 400px;
+  margin-bottom: 30px;
+  margin-top: 100px;
+}
+
+.active {
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 660px;
+  margin-top: 20px;
+  margin-right: 100px;
+  /* margin-bottom: -70px; */
+}
+
+.row1 {
+  margin-bottom: -100px;
+}
+
+.label1 {
+  font-size: 20px;
+  padding: 12px 20px;
+  margin-left: 650px;
+  /* margin-top: 100px; */
+  margin-right: 100px;
+  margin-bottom: 10px;
+  width: 20%;
+}
+
+/* padding: 12px 20px; */
+input[type=text] {
+  width: 20%;
+
+  font-size: 20px;
+  margin-top: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  margin-bottom: 40px;
+  margin-right: 100px;
+  color: black;
+}
+
+.submit-button {
+  font-size: 20px;
+  width: 100px;
+  margin-left: 100px;
+  float: left;
+  height: 40px;
+  margin-top: 100px;
+  background-color: #D5A021;
+  border-radius: 5px;
+  border: 2px black;
+}
+
+.button1 {
+  margin-left: 600px;
+  margin-top: -50px;
+}
+
+table {
+  border: 1px solid black;
+  /* border-collapse: collapse; */
+  margin-left: 400px;
+  width: 60%;
+  border-right: none;
+  font-size: 16px;
+  align-items: center;
+  margin-top: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
+.wrapper {
+  overflow: auto;
+  border-radius: 6px;
+  border: 2px solid black;
+}
+
+.rowAlign {
+  text-align: center;
+  padding: 10px;
+  background-color: #D5D8DC;
+}
+
+th,
+td {
+  border-bottom: 2px solid lightgray;
+  padding: 10px;
+  font-size: 20px;
+}
+
+thead {
+  background-color: #606060;
+  text-align: center;
+
+}
+
+@media screen and (max-width: 768px) {
+  .container-fluid {
+
+    padding: 20px;
+  }
+
+  .title {
+    text-align: center;
+    margin-top: 20px;
+  }
+ 
+  input[type="text"],
+  input[type="checkbox"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .active {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+
+  }
+  
+  .para {
+    text-align: center;
+
+  }
+
+  .button1 {
+    text-align: center;
+  }
+  
+  .submit-button {
+    margin-right: 10px;
+  }
+}
